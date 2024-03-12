@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ConnectVerse</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/CSS/users.css"/>
+</head>
+<body>
+<div class="all">
+    <div>
+        <h1>ConnectVerse</h1>
+    </div>
+
+    <form class="create" action="/create" method="get">
+        <input type="submit" name="Отправить">
+
+    </form>
+
+    <div class="users" th:if="${not #lists.isEmpty(users)}" th:else>
+        <div th:each="user, iterStat : ${users}" th:sort="${-user.id}">
+            <div>
+                <p>
+                    <b>
+                        <span th:text="${iterStat.count}"></span>
+                        <span> .</span>
+                        <span th:text="${user.name}"></span>
+                    </b>
+                    <a th:href="@{/users/{id}(id=${user.id})}"><span th:text="${user.email}"></span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div th:if="${#lists.isEmpty(users)}">
+        <h3>Пользователей нет </h3>
+    </div>
+</div>
+</body>
+</html>

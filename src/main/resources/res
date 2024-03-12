@@ -1,0 +1,23 @@
+h1{
+    font-family: "Bradley Hand ITC", serif;
+    color: blueviolet;
+    font-size: 50px;
+    text-shadow: indigo;
+    font-style: italic;
+    text-align: center;
+    margin: 30px;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ConnectVerse</title>
+<link rel="stylesheet" href="/view/CSS/indexStyle.css">
+</head>
+<body>
+<h1>ConnectVerse</h1>
+
+</body>
+</html>
