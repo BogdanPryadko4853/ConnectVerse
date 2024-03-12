@@ -22,6 +22,9 @@ public class User {
 
     private String password;
 
+    @Enumerated
+    private List<Roles> roles;
+
     private LocalDateTime localDateTime;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
